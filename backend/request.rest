@@ -1,0 +1,29 @@
+GET http://localhost:3080/users
+
+###
+GET http://localhost:3080/users/62991f1cd8cd58d394b999d0
+
+###
+
+POST http://localhost:3080/users
+Content-Type: application/json
+
+{
+    "name": "Master Avi",
+    "email": "Avi@gmail.com",
+    "gender": "male"
+}
+
+###
+
+PATCH http://localhost:3080/users/62991f1cd8cd58d394b999d0
+Content-Type: application/json
+
+{
+    "name": "Master Arief",
+    "email": "arief@gmail.com",
+    "gender": "male"
+}
+
+###
+DELETE  http://localhost:3080/users/62991f1cd8cd58d394b999d0
