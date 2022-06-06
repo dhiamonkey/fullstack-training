@@ -1,10 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserList from "./components/UserList";
+import AddUser from "./components/AddUser";
+import EditUser from "./components/EditUser";
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold text-blue">
-        lorem ipsum doloret si amet
-      </h1>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<UserList />}></Route>
+          <Route path="add" element={<AddUser />}></Route>
+          <Route path="edit/:id" element={<EditUser />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
